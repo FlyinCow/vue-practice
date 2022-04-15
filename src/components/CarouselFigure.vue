@@ -14,13 +14,15 @@ const { imageOption, autopaly } = toRefs(props)
 
 const currentIndex = ref(0)
 
+let timer: number | null;
+
 const setCurrentIndex = (index: number) => {
   const remain = index % imageOption.value.length
   currentIndex.value = remain >= 0 ? remain : remain + imageOption.value.length
 }
 
 if (autopaly?.value) {
-  const timer = setInterval(() => {
+  timer = setInterval(() => {
     setCurrentIndex(currentIndex.value + 1)
   }, 3500)
 }

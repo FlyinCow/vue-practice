@@ -7,20 +7,23 @@ for (const image in imageImported) {
     alt: image
   })
 }
-
 </script>
 
 <template>
-  <CarouselFigure :image-option="images" autopaly></CarouselFigure>
+  <!-- <CarouselFigure :image-option="images" autopaly></CarouselFigure> -->
+  <div class="flex justify-start justify-evenly">
+    <AnimatedButton>click me!</AnimatedButton>
+  </div>
 </template>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+html,
+body {
+  font-size: 18px;
 }
 </style>

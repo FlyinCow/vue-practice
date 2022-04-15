@@ -4,8 +4,10 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AnimatedButton: typeof import('./components/AnimatedButton.vue')['default']
     CarouselFigure: typeof import('./components/CarouselFigure.vue')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    MButton: typeof import('./components/MButton.vue')['default']
+    MCard: typeof import('./components/MCard.vue')['default']
   }
 }
 
